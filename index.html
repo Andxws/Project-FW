@@ -7,11 +7,11 @@
     <title>AutoTech - Calculadora de Servicios</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Pacifico&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
 </head>
 
 <body>
-    <!-- Encabezado de Inicio-->
+    <!-- Sesión -  Encabezado de Inicio -->
     <header>
         <h1>Bienvenid@ a AutoTech!</h1>
         <p>Calculadora de Servicios</p>
@@ -24,127 +24,81 @@
                 <li><a href="#">Conctatanos...</a></li>
             </ul>
         </nav>
-
         <button class="btn-login">Inicia Sesion aqui!</button>
     </header>
 
-    <Main>
-        <div class="contenedor">
-            <section id="Servicios">
-                <h2> Nuestros Servicios</h2>
-                <div class="grid-servicios">
-                    <div class="categoria-servicio">
-                        <h3>Mantenimiento Básico</h3>
-                        <ul class="lista-servicios">
-                            <li class="lista-servicios_opcion">
-                                <label>
-                                    <input type="checkbox">
-                                    <span>Cambio de aceite</span>
-                                    <span>$50.000 mil Pesos.</span>
-                                </label>
-                            </li>
-                            <li class="lista-servicios_opcion">
-                                <label>
-                                    <input type="checkbox">
-                                    <span>Rotación de llantas</span>
-                                    <span>$30.000 mil Pesos.</span>
-                                </label>
-                            </li>
-                            <li class="lista-servicios_opcion">
-                                <label>
-                                    <input type="checkbox">
-                                    <span>Chequeo general</span>
-                                    <span>$80.000 mil Pesos.</span>
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="categoria-servicio">
-                        <h3>Reparaciones</h3>
-                        <ul class="lista-servicios">
-                            <li class="lista-servicios_opcion">
-                                <label>
-                                    <input type="checkbox">
-                                    <span>Reparación de frenos</span>
-                                    <span>$100.000 mil Pesos.</span>
-                                </label>
-                            </li>
-                            <li class="lista-servicios_opcion">
-                                <label>
-                                    <input type="checkbox">
-                                    <span>Reparación de motor</span>
-                                    <span>$500.000 mil Pesos.</span>
-                                </label>
-                            </li>
-                            <li class="lista-servicios_opcion">
-                                <label>
-                                    <input type="checkbox">
-                                    <span>Reparación de transmisión</span>
-                                    <span>$400.000 mil Pesos.</span>
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="categoria-servicio">
-                        <h3>Servicios Adicionales</h3>
-                        <ul class="lista-servicios">
-                            <li class="lista-servicios_opcion">
-                                <label>
-                                    <input type="checkbox">
-                                    <span>Alineación y balanceo</span>
-                                    <span>$70.000 mil Pesos.</span>
-                                </label>
-                            </li>
-                            <li class="lista-servicios_opcion">
-                                <label>
-                                    <input type="checkbox">
-                                    <span>Lavado y encerado</span>
-                                    <span>$40.000 mil Pesos.</span>
-                                </label>
-                            </li>
-                            <li class="lista-servicios_opcion">
-                                <label>
-                                    <input type="checkbox">
-                                    <span>Diagnóstico computarizado</span>
-                                    <span>$60.000 mil Pesos.</span>
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </section>
-            <section id="resumen">
-                <h2>Resumen de Servicios</h2>
-                <ul id="servicios-seleccionados">
-                    <li>Selecciona servicios para ver el resumen</li>
-                </ul>
-                <p>Total: $<span id="costo-total">0</span></p>
-                <button>Solicitar Servicios</button>
-            </section>
-        </div>
-        </div>
-    </Main>
-
-    <footer>
-        <div>
-            <div>
-                <p>AutoTech</p>
-                <p>Tu taller de confianza</p>
+    <!-- Sesión -  Introducción -->
+    <main class="container">
+        <h3>Seleciona tu tipo de vehículo para ver nuestros servicios:</h3>
+        <section class="service-options">
+            <div class="service-card">
+                <img src="https://img.freepik.com/foto-gratis/mecanicos-masculinos-trabajando-juntos-coche-tienda_23-2150376968.jpg?t=st=1730220864~exp=1730224464~hmac=12ed30558994b02935f8f014d963170902e017c2fc0093885f14bce6d93b439d&w=996"
+                    alt="Servicios para Autos">
+                <h3>Autos</h3>
+                <p>Servicios especializados para mantener tu automóvil en óptimas condiciones.</p>
+                <button onclick="location.href='autos.html'">Ver Servicios</button>
             </div>
-            <address>
-                <p>Calle 123, Santiago de Cali, Colombia</p>
-                <p>Teléfono: +57 300 456 7890</p>
-                <p>Email: <a href="contacto@autotech.com">contacto@autotech.com</a></p>
-            </address>
-            <nav>
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-            </nav>
-        </div>
-    </footer>
+            <div class="service-card">
+                <img src="https://img.freepik.com/foto-gratis/mecanicos-masculinos-trabajando-juntos-coche-tienda_23-2150376968.jpg?t=st=1730220864~exp=1730224464~hmac=12ed30558994b02935f8f014d963170902e017c2fc0093885f14bce6d93b439d&w=996"
+                    alt="Servicios para Motocicletas">
+                <h3>Motocicletas</h3>
+                <p>Cuida de tu motocicleta con servicios personalizados y de calidad.</p>
+                <button onclick="location.href='motocicletas.html'">Ver Servicios</button>
+            </div>
+            <p><em>“Cuidamos de tu vehículo como si fuera el nuestro. Con AutoTech, estás en buenas manos.”</em></p>
+        </section>
+    </main>
 
+    <!-- Sesión - ¿Quiénes somos? -->
+    <section class="index-banner">
+        <div>
+            <h2>¿Quiénes somos?</h2>
+            <p>En AutoTech, somos un equipo apasionado por el mundo automotriz y la tecnología, comprometidos en
+                brindarte
+                los mejores servicios de mantenimiento y cuidado para tu vehículo. Creemos que cada auto o motocicleta
+                merece estar en las mejores condiciones, y por eso estamos aquí para ayudarte.</p>
+            <p>Nuestra misión es sencilla: facilitar el acceso a servicios de mantenimiento confiables y de calidad,
+                promoviendo una cultura de prevención y cuidado responsable. Creemos que un buen mantenimiento puede
+                hacer
+                la diferencia en la vida útil y el rendimiento de cualquier vehículo, y queremos que cada usuario de
+                AutoTech tenga la tranquilidad de estar en las mejores manos.</p>
+        </div>
+        <img src="https://img.freepik.com/foto-gratis/mecanicos-masculinos-trabajando-juntos-coche-tienda_23-2150376968.jpg?t=st=1730220864~exp=1730224464~hmac=12ed30558994b02935f8f014d963170902e017c2fc0093885f14bce6d93b439d&w=996"
+            alt="Servicios para Autos">
+    </section>
+
+    <!-- Sesión - Pie de Página -->
+    <footer>
+        div class="footer-container">
+          
+            <div class="footer-image">
+                <img src="https://img.freepik.com/foto-gratis/mecanicos-masculinos-trabajando-juntos-coche-tienda_23-2150376968.jpg"
+                    alt="Taller de AutoTech">
+            </div>
+
+            <div class="footer-social">
+                <p>AutoTech &copy; 2024 - Tu centro de mantenimiento y cuidado de vehículos. Nos especializamos en ofrecer soluciones integrales para autos y motocicletas.</p>
+                <p>Síguenos en nuestras redes sociales:</p>
+                <div class="social-icons">
+                    <a href="#">Facebook</a> |
+                    <a href="#">Twitter</a> |
+                    <a href="#">Instagram</a> |
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="footer-contact">
+                <p>Contacto:</p>
+                <address>
+                    Dirección: Calle 123, Santiago de Cali, Colombia<br>
+                    Teléfono: +57 312-456-7890<br>
+                    Email: <a href="mailto:contacto@autotech.com">contacto@autotech.com</a>
+                </address>
+            </div>
+        </div>
+        <p class="footer-note">AutoTech &copy; 2024 - Tu centro de mantenimiento y cuidado de vehículos.</p>
+    </footer>
+    </footer>
 
 </body>
 
