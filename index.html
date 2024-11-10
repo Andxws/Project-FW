@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoTech - Calculadora de Servicios</title>
+    <title>AutoTech</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Pacifico&display=swap"
         rel="stylesheet">
@@ -14,17 +14,21 @@
     <!-- Sesión -  Encabezado de Inicio -->
     <header>
         <h1>Bienvenid@ a AutoTech!</h1>
-        <p>Calculadora de Servicios</p>
         <nav class="navbar">
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Info</a></li>
-                <li><a href="#">Autos</a></li>
-                <li><a href="#">Motocicletas</a></li>
+                <li><a href="cars.html">Autos</a></li>
+                <li><a href="motorcycles.html">Motocicletas</a></li>
                 <li><a href="#">Conctatanos...</a></li>
             </ul>
         </nav>
-        <button class="btn-login">Inicia Sesion aqui!</button>
+        <button onclick="window.location.href='login.html'">
+            Sign In
+            <div class="arrow-wrapper">
+                <div class="arrow"></div>
+            </div>
+        </button>
     </header>
 
     <!-- Sesión -  Introducción -->
@@ -36,14 +40,14 @@
                     alt="Servicios para Autos">
                 <h3>Autos</h3>
                 <p>Servicios especializados para mantener tu automóvil en óptimas condiciones.</p>
-                <button onclick="location.href='autos.html'">Ver Servicios</button>
+                <button onclick="location.href='cars.html'">Ver Servicios</button>
             </div>
             <div class="service-card">
                 <img src="https://img.freepik.com/foto-gratis/mecanicos-masculinos-trabajando-juntos-coche-tienda_23-2150376968.jpg?t=st=1730220864~exp=1730224464~hmac=12ed30558994b02935f8f014d963170902e017c2fc0093885f14bce6d93b439d&w=996"
                     alt="Servicios para Motocicletas">
                 <h3>Motocicletas</h3>
                 <p>Cuida de tu motocicleta con servicios personalizados y de calidad.</p>
-                <button onclick="location.href='moto.html'">Ver Servicios</button>
+                <button onclick="location.href='motorcycles.html'">Ver Servicios</button>
             </div>
             <p><em>“Cuidamos de tu vehículo como si fuera el nuestro. Con AutoTech, estás en buenas manos.”</em></p>
         </section>
@@ -51,20 +55,18 @@
 
     <!-- Sesión - ¿Quiénes somos? -->
     <section class="index-banner">
-        <div>
+        <div class="text-container">
             <h2>¿Quiénes somos?</h2>
-            <p>En AutoTech, somos un equipo apasionado por el mundo automotriz y la tecnología, comprometidos en
-                brindarte
-                los mejores servicios de mantenimiento y cuidado para tu vehículo. Creemos que cada auto o motocicleta
-                merece estar en las mejores condiciones, y por eso estamos aquí para ayudarte.</p>
-            <p>Nuestra misión es sencilla: facilitar el acceso a servicios de mantenimiento confiables y de calidad,
-                promoviendo una cultura de prevención y cuidado responsable. Creemos que un buen mantenimiento puede
-                hacer
-                la diferencia en la vida útil y el rendimiento de cualquier vehículo, y queremos que cada usuario de
-                AutoTech tenga la tranquilidad de estar en las mejores manos.</p>
+            <p>
+                En AutoTech, somos un equipo apasionado por el mundo automotriz y la tecnología, comprometidos en brindarte los mejores servicios de mantenimiento y cuidado para tu vehículo. Creemos que cada auto o motocicleta merece estar en las mejores condiciones, y por eso estamos aquí para ayudarte.
+            </p>
+            <p>
+                Nuestra misión es sencilla: facilitar el acceso a servicios de mantenimiento confiables y de calidad, promoviendo una cultura de prevención y cuidado responsable. Creemos que un buen mantenimiento puede hacer la diferencia en la vida útil y el rendimiento de cualquier vehículo, y queremos que cada usuario de AutoTech tenga la tranquilidad de estar en las mejores manos.
+            </p>
         </div>
-        <img src="https://img.freepik.com/foto-gratis/mecanicos-masculinos-trabajando-juntos-coche-tienda_23-2150376968.jpg?t=st=1730220864~exp=1730224464~hmac=12ed30558994b02935f8f014d963170902e017c2fc0093885f14bce6d93b439d&w=996"
-            alt="Servicios para Autos">
+        <div class="image-container">
+            <img src="https://raw.githubusercontent.com/Andxws/Image/refs/heads/main/Image/Logo2.png" alt="Auto-Tech logo">
+        </div>
     </section>
 
     <!-- Sesión - Pie de Página -->
