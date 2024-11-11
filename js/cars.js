@@ -15,7 +15,7 @@ function scheduleService() {
 
     servicePrice = parseFloat(servicePrice.replace('.', ',').replace(',', '.'));
 
-    if (!serviceName || serviceName === "Selecciona un servicio") return;
+    if (!serviceName || serviceName === "Selecciona un servicio para visualizar") return;
 
     scheduledServices.push({ name: serviceName, price: servicePrice });
 
@@ -23,7 +23,7 @@ function scheduleService() {
     const listItem = document.createElement('li');
     listItem.classList.add('scheduled-service-item');
 
-    listItem.innerText = `${serviceName} - ${servicePrice.toLocaleString('es-CO')} COP`; 
+    listItem.innerText = `${serviceName} - ${servicePrice.toLocaleString('es-CO')} COP`;
 
     const deleteButton = document.createElement('button');
     deleteButton.innerText = "X";
@@ -37,7 +37,7 @@ function scheduleService() {
     scheduledList.appendChild(listItem);
 
     totalCost += servicePrice;
-    document.getElementById('total-cost').innerText = `${totalCost.toLocaleString('es-CO')} COP`; 
+    document.getElementById('total-cost').innerText = `${totalCost.toLocaleString('es-CO')} COP`;
 
     if (scheduledServices.length > 6) {
         document.getElementById('sidebar').style.display = 'block';
@@ -48,7 +48,7 @@ function removeService(listItem, servicePrice) {
     scheduledServices = scheduledServices.filter(service => service.name !== listItem.innerText.split(' - ')[0]);
 
     totalCost -= servicePrice;
-    document.getElementById('total-cost').innerText = `${totalCost.toLocaleString('es-CO')} COP`; 
+    document.getElementById('total-cost').innerText = `${totalCost.toLocaleString('es-CO')} COP`;
 
     listItem.remove();
 
@@ -102,22 +102,22 @@ accordionButtons.forEach(button => {
 });
 
 function searchServices() {
-    const searchTerm = document.getElementById("search-input").value.trim().toLowerCase(); 
+    const searchTerm = document.getElementById("search-input").value.trim().toLowerCase();
     const accordionItems = document.querySelectorAll(".accordion-item");
 
     function normalizeText(text) {
-        return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); 
+        return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
     }
 
     accordionItems.forEach(item => {
         const services = item.querySelectorAll("li");
-        let categoryMatch = false; 
+        let categoryMatch = false;
 
         services.forEach(service => {
-            const serviceText = normalizeText(service.textContent); 
-            const normalizedSearchTerm = normalizeText(searchTerm); 
+            const serviceText = normalizeText(service.textContent);
+            const normalizedSearchTerm = normalizeText(searchTerm);
 
-            const searchWords = normalizedSearchTerm.split(" "); 
+            const searchWords = normalizedSearchTerm.split(" ");
 
             const allWordsMatch = searchWords.every(word => serviceText.includes(word));
 
@@ -125,7 +125,7 @@ function searchServices() {
                 service.style.display = "block";
                 categoryMatch = true;
             } else {
-                service.style.display = "none"; 
+                service.style.display = "none";
             }
         });
 
