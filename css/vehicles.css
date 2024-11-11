@@ -15,11 +15,12 @@ body {
    
 
 }
+
 /* ENCABEZADO*/
 
 header {
-    background-color: var(--color-background); /* Fondo blanco */
-    color: var(--color-text-dark); /* Texto en verde oscuro */
+    background-color: var(--color-background);
+    color: var(--color-text-dark); 
     padding: 10px 30px;
     display: flex;
     justify-content: space-between;
@@ -28,17 +29,16 @@ header {
     top: 0;
     width: 100%;
     z-index: 1600;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     font-size: 2em;
     font-family: "Rancho", cursive;
-    color: var(--color-primary); /* Verde profundo */
+    color: var(--color-primary);
     margin: 0;
 }
 
-/* Botón de regreso */
 header button {
     --primary-color: #ffffff;
     --secondary-color: #030303d2;
@@ -74,11 +74,11 @@ header button:hover>svg {
     transform: translateX(-5px);
 }
 
-/* Estilo para el campo de búsqueda */
+
 .search-container {
     position: relative;
-    max-width: 250px; /* Ajusta el ancho del buscador */
-    margin-right: 60px; /* Separación a la derecha */
+    max-width: 250px; 
+    margin-right: 60px; 
     display: flex;
     justify-content: flex-end;
 }
@@ -102,7 +102,7 @@ header button:hover>svg {
 .search-icon {
     position: absolute;
     top: 50%;
-    right: 12px; /* Ajusta el icono dentro del campo */
+    right: 12px;
     transform: translateY(-50%);
     color: #888;
     font-size: 16px;
@@ -113,3 +113,76 @@ header button:hover>svg {
     color: #aaa;
     font-size: 13px;
 }
+
+/*SERVICIOS*/
+
+.main-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-top: 80px;
+    min-height: 80vh;
+}
+
+.services {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    max-height: 1800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.612);
+    
+}
+
+.services h3 {
+    font-size: 1.5em;
+    text-align: center;
+    font-family: "Lilita One", sans-serif;
+    color: #000;
+
+}
+
+.accordion-button {
+    background-color: #fff;
+    color: #020202;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+    background-color: #E9F5EB;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.accordion-content li button {
+    width: 99%;
+    padding: 10px;
+    text-align: left;
+    background-color: #fff;
+    color: #099438d7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 0.8em;
+}
+
+
+
