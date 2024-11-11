@@ -114,7 +114,7 @@ header button:hover>svg {
     font-size: 13px;
 }
 
-/*SERVICIOS*/
+/* SERVICIOS */
 
 .main-content {
     display: flex;
@@ -278,4 +278,62 @@ li {
     text-align: center;
     font-family: "Lilita One", sans-serif;
     color: #000;
+}
+
+/* PIE DE PÁGINA */
+
+.footer-vehicles {
+    background-color: #333; 
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 0.9em;
+    font-family: Arial, sans-serif;
+}
+
+.footer-vehicles p {
+    margin: 5px 0;
+}
+
+/*ESTILOS RESPONSIVOS*/
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start; 
+    }
+
+    .search-container {
+        max-width: 100%; 
+        margin-right: 0; 
+        margin-bottom: 10px; 
+    }
+
+    .main-content {
+        flex-direction: column; 
+        padding: 10px; 
+    }
+
+    .services, .details-schedule-container {
+        max-height: none;
+    }
+
+    .scheduled-service-item {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    button.btn-delete {
+        position: relative; 
+        width: auto; 
+        margin-top: 5px; 
+
+    }
+
+    .footer-vehicles {
+        font-size: 0.8em;
+        padding: 15px 5px;
+    }
+
 }

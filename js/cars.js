@@ -8,7 +8,6 @@ function showDetails(serviceName, serviceDescription, servicePrice) {
     document.getElementById('service-price').dataset.price = servicePrice;
 }
 
-
 function scheduleService() {
     const serviceName = document.getElementById('service-name').innerText;
     let servicePrice = document.getElementById('service-price').dataset.price;
