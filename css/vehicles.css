@@ -1,0 +1,115 @@
+:root {
+    --color-primary: #1B853C;
+    --color-secondary: #6fcd73;
+    --color-background: #ffffff;
+    --color-text-dark: #2B3A31;
+    --color-accent: #ffffff;
+    --hover-color: #4edb65ef;
+}
+
+body {
+    background-color: var(--color-accent);
+    color: var(--color-text-dark);
+    margin: 0;
+    padding: 0;
+   
+
+}
+/* ENCABEZADO*/
+
+header {
+    background-color: var(--color-background); /* Fondo blanco */
+    color: var(--color-text-dark); /* Texto en verde oscuro */
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+header h1 {
+    font-size: 2em;
+    font-family: "Rancho", cursive;
+    color: var(--color-primary); /* Verde profundo */
+    margin: 0;
+}
+
+/* Botón de regreso */
+header button {
+    --primary-color: #ffffff;
+    --secondary-color: #030303d2;
+    --hover-color: #4edb65ef;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+    margin-right: 40px;
+    transition: 0.2s background, transform 0.2s;
+}
+
+header button:hover {
+    transform: translateY(-2px);
+    background-color: var(--hover-color);
+}
+
+header button>svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+}
+
+header button:hover>svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+}
+
+/* Estilo para el campo de búsqueda */
+.search-container {
+    position: relative;
+    max-width: 250px; /* Ajusta el ancho del buscador */
+    margin-right: 60px; /* Separación a la derecha */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-container input[type="text"] {
+    width: 100%;
+    padding: 8px 35px 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-container input[type="text"]:focus {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-color: #0078d7;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 12px; /* Ajusta el icono dentro del campo */
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.search-container input[type="text"]::placeholder {
+    color: #aaa;
+    font-size: 13px;
+}
