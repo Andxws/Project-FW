@@ -1,82 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoTecht</title>
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=HMwxzLul2dfm&format=png&color=000000" type="image/png">
+    <link rel="stylesheet" href="css/vehicles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Rancho&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Sesión -  Encabezado de Inicio -->
     <header>
-        <button> back</button>
-
+        <button onclick="window.location.href='index.html'">
+            <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
+                <path
+                    d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z">
+                </path>
+            </svg>
+            <span>Back</span>
+        </button>
         <h1>AutoTech</h1>
-
-        <div class="search-container"></div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar servicios..." oninput="searchServices()">
+            <div class="search-icon">
+                🔍
+            </div>
+        </div>
     </header>
+
     <!-- Sesión -  Contenido Principal -->
     <main>
         <div class="main-content">
             <div class="services">
-                <h3>Servicios para Automovil</h3>
+                <h3>Servicios para Automoviles</h3>
                 <div class="accordion">
                     <!-- Mantenimiento General -->
                     <div class="accordion-item">
-                        <button class="service-button"></button>
+                        <button class="accordion-button" onclick="toggleAccordion(this)">Mantenimiento General</button>
                         <div class="accordion-content">
                             <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Cambio de Aceite', 'Sustitución del aceite para proteger y  asegurar el rendimiento óptimo del motor.', 100000)">
+                                        <img width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" /> Cambio
+                                        de Aceite</button></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Cambio de Filtros', 'Reemplazo de filtros de aire, aceite y combustible para asegurar un motor limpio.', 80000)">
+                                        <img width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" /> Cambio
+                                        de Filtros</button></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Ajuste de Frenos', 'Ajuste y revisión completa de los frenos.', 180000)"><img
+                                            width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" /> Ajuste
+                                        de Frenos</button></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Revisión de Luces', 'Chequeo completo y ajuste de todas las luces.', 50000)"><img
+                                            width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" /> Revisión
+                                        de Luces</button></li>
                             </ul>
                         </div>
                     </div>
+
                     <!-- Cuidado del Motor -->
                     <div class="accordion-item">
-                        <button class="service-button"></button>
+                        <button class="accordion-button" onclick="toggleAccordion(this)">Cuidado del Motor</button>
                         <div class="accordion-content">
                             <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Limpieza de Inyectores', 'Limpieza de inyectores para mejorar el rendimiento del motor.', 150000)"><img
+                                            width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" /> Limpieza
+                                        de Inyectores</button></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Diagnóstico de Motor', 'Revisión completa del motor para detectar problemas.', 100000)"><img
+                                            width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" /> Diagnóstico
+                                        de Motor</button></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Cambio de Correa de Distribución', 'Reemplazo de la correa para evitar fallos en el motor.', 400000)"><img
+                                            width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" /> Cambio
+                                        de Correa de Distribución</button></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Reemplazo de Bujías', 'Cambio de bujías para un mejor rendimiento del motor.', 130000)"><img
+                                            width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" />Reemplazo
+                                        de Bujías</button></li>
                             </ul>
                         </div>
                     </div>
+
                     <!-- Transmisión y Suspensión -->
                     <div class="accordion-item">
-                        <button class="service-button"></button>
+                        <button class="accordion-button" onclick="toggleAccordion(this)">Transmisión y
+                            Suspensión</button>
                         <div class="accordion-content">
                             <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Revisión de Suspensión', 'Chequeo y ajuste de la suspensión del vehículo.', 150000)"><img
+                                            width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" />Revisión
+                                        de Suspensión</button></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Alineación y Balanceo', 'Alineación y balanceo de las llantas para un manejo seguro.', 100000)"><img
+                                            width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" />Alineación
+                                        y Balanceo</button></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Cambio de Amortiguadores', 'Reemplazo de amortiguadores para una mejor conducción.', 450000)"><img
+                                            width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" />Cambio
+                                        de Amortiguadores</button></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Servicio de Transmisión', 'Mantenimiento y revisión del sistema de transmisión.', 350000)"><img
+                                            width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" />Servicio
+                                        de Transmisión</button></li>
                             </ul>
                         </div>
                     </div>
+
                     <!-- Climatización -->
                     <div class="accordion-item">
-                        <button class="service-button"></button>
+                        <button class="accordion-button" onclick="toggleAccordion(this)">Climatización</button>
                         <div class="accordion-content">
                             <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Recarga de Aire Acondicionado', 'Recarga de refrigerante para el aire acondicionado.', 120000)"><img
+                                            width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" />Recarga
+                                        de Aire Acondicionado</button></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Mantenimiento de Calefacción', 'Chequeo y mantenimiento del sistema de calefacción.', 100000)"><img
+                                            width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" />Mantenimiento
+                                        de Calefacción</button></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Cambio de Filtros de Aire Acondicionado', 'Reemplazo de filtros de aire acondicionado para un mejor flujo.', 60000)"><img
+                                            width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" />Cambio
+                                        de Filtros de Aire Acondicionado</button></li>
                             </ul>
                         </div>
                     </div>
+
                     <!-- Neumáticos -->
                     <div class="accordion-item">
-                        <button class="service-button"></button>
+                        <button class="accordion-button" onclick="toggleAccordion(this)">Neumáticos</button>
                         <div class="accordion-content">
                             <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+
+                                <li><button class="service-button"
+                                        onclick="showDetails('Rotación de Llantas', 'Rotación de llantas para un desgaste uniforme.', 50000)"><img
+                                            width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" />Rotación
+                                        de Llantas</button></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Reparación de Pinchazos', 'Reparación de pinchazos para alargar la vida de las llantas.', 40000)"><img
+                                            width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" />Reparación
+                                        de Pinchazos</button></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Inspección de Neumáticos', 'Chequeo del estado y presión de los neumáticos.',50000)"><img
+                                            width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" />Inspección
+                                        de Neumáticos</button></li>
+                                <li><button class="service-button"
+                                        onclick="showDetails('Venta de Llantas Nuevas', 'Venta y asesoría en llantas nuevas. (por llanta)', 300000)"><img
+                                            width="25" height="25" margin-right="5px"
+                                            src="https://img.icons8.com/stickers-duotone/50/settings-3.png"
+                                            alt="settings-3" />Venta
+                                        de Llantas Nuevas</button></li>
                             </ul>
                         </div>
                     </div>
@@ -84,37 +202,36 @@
             </div>
 
             <!-- Sesión -  Detalles del Servicio y Servicios Agendados -->
-            <div class="details-shedule-container">
-
+            <div class="details-schedule-container">
                 <div class="service-details">
                     <h3>Detalles del Servicio</h3>
-                    <p id="">Selecciona un servici</p>
-                    <p id=""></p>
-                    <p id=""></p>
-                    <button>Agendar Servicio</button>
+                    <p id="service-name">Selecciona un servicio</p>
+                    <p id="service-description"></p>
+                    <p id="service-price">$0</p>
+                    <button onclick="scheduleService()">Agendar Servicio</button>
                 </div>
 
                 <div class="scheduled-services">
                     <h3>Servicios Agendados</h3>
-                    <ul></ul>
-                    <p>Total:</p>
-                    <button></button>
+                    <ul id="scheduled-list"></ul>
+                    <p>Total: $<span id="total-cost">0</span></p>
+                    <button onclick="payServices()">Pagar</button>
                 </div>
-
             </div>
         </div>
     </main>
 
-     <!-- Sesión - Pie de Página -->
+    <!-- Sesión - Pie de Página -->
     <footer class="footer-vehicles">
         <p>AutoTech &copy; 2024</p>
         <p>Confía en AutoTech para mantener tu vehículo en perfectas condiciones.</p>
     </footer>
 
-     <!-- Inserción de JS -->
-    <script src=""></script>
+    <!-- Inserción de JS -->
+    <script src="js/cars.js"></script>
 
 
 
 </body>
+
 </html>
