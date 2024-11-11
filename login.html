@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login - AutoTech</title>
+       <!-- <link rel="icon" href="https://img.icons8.com/?size=100&id=HMwxzLul2dfm&format=png&color=000000" type="image/png"> -->
+        <link rel="icon" href="https://img.icons8.com/?size=100&id=aOIgAaBKsm36&format=png&color=000000" type="image/png">
+       
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+      </head>
+<body>
+    <div class="container">
+        <h1>Auto-Tech</h1>
+        <h2>Inicie sesión con su Cuenta</h2>
+        <p class="subheading">Comienza a utilizar nuestra aplicación, simplemente crea una cuenta y disfruta de la experiencia.</p>
+        <!-- FORMULARIO DE INICIO DE SESION -->
+        <form id="loginForm" class="form" onsubmit="loginUser(event)">
+          <div class="input-group">
+            <label for="login-email">E-mail</label>
+            <input required class="input" type="email" name="email" id="login-email" placeholder="name@mail.com">
+          </div>
+          <div class="input-group">
+            <label for="login-password">Password</label>
+            <input required class="input" type="password" name="password" id="login-password" placeholder="Password">
+          </div>
+          <button type="submit" class="button">Sign In</button>
+          <button type="button" class="button signup-button" onclick="redirectToSignUp()">Sign Up</button>
+          <div class="separator">
+            <hr> <span>Or</span> <hr>
+          </div>
+          <button type="button" class="button google-login-button" onclick="loginWithGoogle()">Sign in with Google</button>
+        </form>
+    
+        <a href="#" class="terms">Terms of use & Conditions</a>
+      </div>
+    
+      <script src="js/login.js"></script>
+    </body>
+
+</html>

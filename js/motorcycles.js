@@ -9,7 +9,7 @@ function showDetails(serviceName, serviceDescription, unitPrice) {
     
 
     if (serviceName === "Cambio de Bujías") {
-        const quantity = prompt("¿Cuántas bujías desea cambiar?");
+        const quantity = prompt("¿Cuántas bujías desea cambiar? $20.000 c/u ");
 
         if (quantity && !isNaN(quantity) && quantity > 0) {
             totalPrice = unitPrice * quantity;
